@@ -1,204 +1,284 @@
 <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Z-School</title>
-                            <style>
-                                body {
-                                    display: flex;
-                                    flex-direction: column;
-                                    min-height: 100vh;
-                                    background-color: #0b0b0b;
-                                    color: white;
-                                    font-family: Arial, sans-serif;
-                                    text-align: center;
-                                    margin: 0;
-                                    padding: 0;
-                                }
-                                .header {
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    padding: 20px 50px;
-                                    background-color: #0b0b0b;
-                                    border-bottom: 2px solid #444;
-                                }
-                                .header h1 {
-                                    font-size: 1.5em;
-                                }
-                                .header a {
-                                    color: white;
-                                    font-size: 1em;
-                                }
-                                .container {
-                                    flex: 1;
-                                    width: 80%;
-                                    margin: auto;
-                                    padding: 20px;
-                                }
-                                .plans {
-                                    display: flex;
-                                    justify-content: center;
-                                    gap: 20px;
-                                    margin-bottom: 30px;
-                                    flex-wrap: wrap;
-                                }
-                                .plan {
-                                    background-color: #161616;
-                                    border: 2px solid #444;
-                                    padding: 20px;
-                                    width: 250px;
-                                    border-radius: 10px;
-                                    text-align: center;
-                                    margin-bottom: 20px;
-                                }
-                                .plan h3 {
-                                    margin: 0;
-                                    font-size: 1.2em;
-                                }
-                                .plan h2 {
-                                    margin: 10px 0;
-                                    font-size: 1.5em;
-                                    font-weight: bold;
-                                }
-                                .plan p {
-                                    color: #0cc196;
-                                    font-size: 0.9em;
-                                    margin: 5px 0;
-                                }
-                                .register-btn {
-                                    background-color: #4338ca;
-                                    color: white;
-                                    padding: 10px 20px;
-                                    border: none;
-                                    border-radius: 5px;
-                                    cursor: pointer;
-                                    font-weight: bold;
-                                    margin-top: 30px;
-                                }
-                                .contact-options {
-                                    display: none;
-                                    margin-top: 20px;
-                                }
-                                .contact-btn {
-                                    background-color: #25D366;
-                                    color: white;
-                                    padding: 10px 20px;
-                                    border: none;
-                                    border-radius: 5px;
-                                    cursor: pointer;
-                                    font-weight: bold;
-                                    margin: 10px;
-                                }
-                                .email-btn {
-                                    background-color: #D44638;
-                                    color: white;
-                                    padding: 10px 20px;
-                                    border: none;
-                                    border-radius: 5px;
-                                    cursor: pointer;
-                                    font-weight: bold;
-                                    margin: 10px;
-                                }
-                                footer {
-                                    padding: 20px;
-                                    background-color: #111;
-                                    font-size: 0.9em;
-                                    text-align: center;
-                                }
-                                @media (max-width: 768px) {
-                                    .header {
-                                        flex-direction: column;
-                                        padding: 20px;
-                                    }
-                                    .header h1 {
-                                        font-size: 1.2em;
-                                    }
-                                    .header a {
-                                        font-size: 0.9em;
-                                    }
-                                    .container {
-                                        width: 90%;
-                                        padding: 10px;
-                                    }
-                                    .plans {
-                                        flex-direction: column;
-                                        align-items: center;
-                                    }
-                                    .plan {
-                                        width: 100%;
-                                        max-width: 300px;
-                                    }
-                                }
-                                @media (max-width: 480px) {
-                                    .header {
-                                        padding: 10px;
-                                    }
-                                    .header h1 {
-                                        font-size: 1em;
-                                    }
-                                    .header a {
-                                        font-size: 0.8em;
-                                    }
-                                    .container {
-                                        width: 100%;
-                                        padding: 5px;
-                                    }
-                                    .plan {
-                                        padding: 10px;
-                                        width: 100%;
-                                        max-width: 250px;
-                                    }
-                                    .register-btn {
-                                        padding: 8px 16px;
-                                        font-size: 0.9em;
-                                    }
-                                }
-                            </style>
-                        </head>
-                        <body>
-                        <header class="header">
-                            <h1>Z-School</h1>
-                            <br>
-                            <p>Coaching classes with Zeeshan Sarfraz</p>
-                        </header>
-                        <div class="container">
-                            <h2>Z-School Paid Plans</h2>
-                            <div class="plans">
-                                <div class="plan">
-                                    <h3>One Day Plan</h3>
-                                    <h2>300 PKR/-</h2>
-                                    <p>✔ 1 x Lecture (40 min)</p>
-                                    <p>✔ Online</p>
-                                </div>
-                                <div class="plan">
-                                    <h3>One Week Plan</h3>
-                                    <h2>600 PKR/-</h2>
-                                    <p>✔ 3 x Lectures (40 min)</p>
-                                    <p>✔ Online on Monday, Wednesday, and Friday</p>
-                                </div>
-                                <div class="plan">
-                                    <h3>Monthly Plan</h3>
-                                    <h2>1200 PKR/-</h2>
-                                    <p>✔ 4 x Lectures (40 min)</p>
-                                    <p>✔ Online on Saturday, Sunday, Tuesday, and Thursday</p>
-                                </div>
-                            </div>
-                            <button class="register-btn" onclick="showContactOptions()">Register Now</button>
-                            <div class="contact-options" id="contactOptions">
-                                <button class="contact-btn" onclick="window.location.href='https://wa.me/923109233844'">WhatsApp</button>
-                                <button class="email-btn" onclick="window.location.href='mailto:zeeshan.sarfraz@atrons.net'">Email</button>
-                            </div>
-                        </div>
-                        <footer>
-                            <h3>Z-School</h3>
-                            <p>Join Z-School for affordable and flexible online learning plans!</p>
-                        </footer>
-                        <script>
-                            function showContactOptions() {
-                                document.getElementById('contactOptions').style.display = 'block';
-                            }
-                        </script>
-                        </body>
-                        </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-School - Professional Programming Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4338ca;
+            --accent-color: #0cc196;
+            --bg-dark: #0b0b0b;
+            --bg-light: #161616;
+            --text-light: #ffffff;
+            --border-color: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            padding: 1.5rem 5%;
+            background-color: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+
+        .container {
+            flex: 1;
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            background: linear-gradient(145deg, #1a1a1a, #212121);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .courses {
+            max-width: 600px;
+            margin: 1.5rem auto;
+        }
+
+        .courses p {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .courses p::before {
+            content: "→";
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .plan {
+            background: linear-gradient(145deg, #1a1a1a, #212121);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(67, 56, 202, 0.1);
+        }
+
+        .plan::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .plan h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .plan h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .plan p {
+            color: #a0a0a0;
+            margin: 0.8rem 0;
+            font-size: 1rem;
+        }
+
+        .register-btn {
+            background: linear-gradient(45deg, var(--primary-color), #5647d2);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 2rem 0;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(67, 56, 202, 0.2);
+        }
+
+        .contact-options {
+            display: none;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .contact-btn, .email-btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .contact-btn {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .email-btn {
+            background-color: #D44638;
+            color: white;
+        }
+
+        .contact-btn:hover, .email-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #111;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+
+            .intro-section {
+                padding: 1.5rem;
+            }
+
+            .plan {
+                padding: 1.5rem;
+            }
+
+            .register-btn {
+                padding: 0.8rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>Z-School</h1>
+</header>
+<div class="container">
+    <div class="intro-section">
+        <h2>Welcome to Z-School</h2>
+        <p>Elevate your programming skills with us. We offer couching classes for:</p>
+        <div class="courses">
+            <p>C++ Programming (Fundamentals and Data Structures & Algorithms)</p>
+            <p>Java Programming (Object-Oriented Programming)</p>
+        </div>
+    </div>
+
+    <h2>Choose Your Learning Path</h2>
+    <div class="plans">
+        <div class="plan">
+            <h3>Starter Plan</h3>
+            <h2>300 PKR</h2>
+            <p>✔ Single 40-minute lecture</p>
+            <p>✔ One-on-one online session</p>
+            <p>✔ Flexible scheduling</p>
+        </div>
+        <div class="plan">
+            <h3>Weekly Plan</h3>
+            <h2>600 PKR</h2>
+            <p>✔ Three 40-minute lectures</p>
+            <p>✔ Monday, Wednesday, Friday schedule</p>
+            <p>✔ Consistent learning pace</p>
+        </div>
+        <div class="plan">
+            <h3>Premium Monthly</h3>
+            <h2>1200 PKR</h2>
+            <p>✔ Four 40-minute lectures per week</p>
+            <p>✔ Saturday, Sunday, Tuesday, Thursday</p>
+            <p>✔ Comprehensive learning experience</p>
+        </div>
+    </div>
+    <button class="register-btn" onclick="showContactOptions()">Start Learning Today</button>
+    <div class="contact-options" id="contactOptions">
+        <button class="contact-btn" onclick="window.location.href='https://wa.me/923109233844'">Contact via WhatsApp</button>
+        <button class="email-btn" onclick="window.location.href='mailto:zeeshan.sarfraz@atrons.net'">Send Email</button>
+    </div>
+</div>
+<footer>
+    <h3>Z-School</h3>
+    <p>Join Z-School for affordable and flexible online learning</p>
+</footer>
+<script>
+    function showContactOptions() {
+        const contactOptions = document.getElementById('contactOptions');
+        contactOptions.style.display = contactOptions.style.display === 'none' ? 'flex' : 'none';
+    }
+</script>
+</body>
+</html>
