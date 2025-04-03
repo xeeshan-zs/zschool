@@ -275,9 +275,10 @@
     <p>Join Z-School for affordable and flexible online learning</p>
 </footer>
 <script>
-    function showContactOptions() {
+   function showContactOptions() {
         const contactOptions = document.getElementById('contactOptions');
-        contactOptions.style.display = contactOptions.style.display === 'none' ? 'flex' : 'none';
+        const currentDisplay = window.getComputedStyle(contactOptions).display;
+        contactOptions.style.display = currentDisplay === 'none' ? 'flex' : 'none';
     }
 </script>
 </body>
