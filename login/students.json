@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "roll": "CS-381",
+      "name": "Zair Haider",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": false
+    },
+    {
+      "roll": "CS-380",
+      "name": "Urooj Nisar",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": false
+    },
+    {
+      "roll": "CS-373",
+      "name": "Noor Fatima",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": false
+    },
+    {
+      "roll": "CS-368",
+      "name": "Haseeb Tariq",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": false
+    }
+  ]
+}

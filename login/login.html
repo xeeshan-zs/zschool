@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ZSchool Student Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-container">
+    <div class="logo" id="login-logo">
+      <img src="https://z-school.netlify.app/assets/logo.png" alt="ZSchool Logo" height="60" />
+      <h1>ZSchool Student Portal</h1>
+    </div>
+    <div id="login-container">
+      <h2>Student Login</h2>
+      <form id="login-form" autocomplete="off">
+        <label for="roll">Roll Number</label>
+        <input type="text" id="roll" name="roll" required autocomplete="username" placeholder="e.g. 2023001">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Enter password">
+        <button type="submit">Login</button>
+        <p id="login-error" class="error"></p>
+      </form>
+    </div>
+
+    <!-- DASHBOARD & NAVIGATION -->
+    <div id="app-shell" style="display: none;">
+      <!-- Header & Nav -->
+      <header>
+        <div class="header-inner">
+          <img src="https://z-school.netlify.app/assets/logo.png" alt="ZSchool Logo" height="38" />
+          <span class="site-title">ZSchool</span>
+        </div>
+        <nav>
+          <button class="nav-btn active" id="nav-home">Home</button>
+          <button class="nav-btn" id="nav-contact">Contact Us</button>
+          <button class="nav-btn" id="logout-btn">Logout</button>
+        </nav>
+      </header>
+      <!-- Main Content -->
+      <main>
+        <!-- HOME DASHBOARD PAGE -->
+        <section id="dashboard-container">
+          <h2>Welcome, <span id="student-name"></span>!</h2>
+          <div class="dashboard-flex">
+            <div class="dashboard-section card">
+              <h3>Account Info</h3>
+              <ul>
+                <li><strong>Name:</strong> <span id="student-name-info"></span></li>
+                <li><strong>Roll Number:</strong> <span id="student-roll"></span></li>
+                <li><strong>Fee Paid (This Month):</strong> <span id="student-fee"></span></li>
+              </ul>
+            </div>
+            <div class="dashboard-section card">
+              <h3>Course Info</h3>
+              <ul id="course-list"></ul>
+            </div>
+          </div>
+        </section>
+        <!-- CONTACT US PAGE -->
+        <section id="contactus-container" style="display:none;">
+          <div class="card contact-card">
+            <h2>Contact Us</h2>
+            <p>We're here to help! Reach out to us via:</p>
+            <ul class="contact-info-list">
+              <li>
+                <strong>Phone:</strong>
+                <a href="tel:+923109233844" class="contact-link">+92 310 9233844</a>
+              </li>
+              <li>
+                <strong>WhatsApp:</strong>
+                <a href="https://wa.me/923109233844" class="contact-link" target="_blank">+92 310 9233844</a>
+              </li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:zeeshan.sarfraz3667@atrons.net" class="contact-link">zeeshan.sarfraz3667@atrons.net</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
