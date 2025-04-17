@@ -34,6 +34,13 @@
       "password": "123",
       "courses": ["DSA"],
       "feePaid": false
+    },
+    {
+      "roll": "CS-342",
+      "name": "Ateeb Khalid",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": true
     }
   ]
 }
