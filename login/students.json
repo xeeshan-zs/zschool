@@ -27,6 +27,13 @@
       "password": "123",
       "courses": ["DSA"],
       "feePaid": false
+    },
+    {
+      "roll": "CS-358",
+      "name": "Javeria Javaid",
+      "password": "123",
+      "courses": ["DSA"],
+      "feePaid": false
     }
   ]
 }
