@@ -26,7 +26,7 @@
       "name": "Haseeb Tariq",
       "password": "123",
       "courses": ["DSA"],
-      "feePaid": Yes
+      "feePaid": true 
     },
     {
       "roll": "CS-358",
