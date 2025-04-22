@@ -41,6 +41,13 @@
       "password": "123",
       "courses": ["DSA"],
       "feePaid": true
+    },
+    {
+      "roll": "LBSCS-9248667",
+      "name": "Hamad Gujjar",
+      "password": "146",
+      "courses": ["OOP"],
+      "feePaid": false
     }
   ]
 }
